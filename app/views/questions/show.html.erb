@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 class="title-lg mb"> Question <%= @question.id  %></h2>
+
+
+    <p class="mb-sm"><%= @question.body %></p>
+    <p>user_id: <b><%= @question.user_id %></b></p>
+    
+    <p class="mt">
+        <%= link_to fa_icon('pancil') "edit question", edit_question_path(@question) %>
+    </p>
+
+    <p class="mt"> <%= link_to "back to all questions", questions_path %> </p>
+
+
+    <div>
+        <%= button_to "Delete question", question_path(@question),
+        method: :delete %>
+    </div>
+</div>
